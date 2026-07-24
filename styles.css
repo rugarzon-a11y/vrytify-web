@@ -94,6 +94,12 @@ a:focus-visible, button:focus-visible, .lang-btn:focus-visible{
   position:relative;
   flex: none;
 }
+.brand-logo-img{
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  flex: none;
+  display: block;
+}
 .brand-mark::after{
   content:"";
   position:absolute;
