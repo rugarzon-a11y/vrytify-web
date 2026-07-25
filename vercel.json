@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/android",
+      "destination": "https://play.google.com/store/apps/details?id=com.veronexo.app",
+      "permanent": false
+    },
+    {
+      "source": "/ios",
+      "destination": "https://vrytify.com",
+      "permanent": false
+    }
+  ]
+}
