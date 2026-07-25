@@ -59,8 +59,24 @@
     });
   }
 
+  function initNavDropdown() {
+    var dropdown = document.querySelector(".nav-dropdown");
+    if (!dropdown) return;
+    document.addEventListener("click", function (e) {
+      if (dropdown.hasAttribute("open") && !dropdown.contains(e.target)) {
+        dropdown.removeAttribute("open");
+      }
+    });
+    dropdown.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        dropdown.removeAttribute("open");
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLangSwitch();
     initMobileNav();
+    initNavDropdown();
   });
 })();

@@ -204,6 +204,73 @@ nav.main-nav a[aria-current="page"]::after{
   .nav-toggle{ display:block; }
 }
 
+/* -------------------- nav dropdown "Legal" -------------------- */
+.nav-dropdown{ position:relative; }
+.nav-dropdown > summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+.nav-dropdown > summary::-webkit-details-marker{ display:none; }
+.nav-dropdown > summary::after{
+  content:"▾";
+  font-size:0.65em;
+  color: var(--muted);
+  transition: transform .15s ease;
+}
+.nav-dropdown[open] > summary::after{ transform: rotate(180deg); }
+.nav-dropdown[open] > summary{ color: var(--sky); }
+
+.nav-dropdown-panel{
+  display:grid;
+  gap: 22px;
+}
+.nav-dropdown-col h6{
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.nav-dropdown-col{ display:grid; gap:2px; }
+.nav-dropdown-col a{
+  display:block;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  text-decoration:none;
+  color: var(--ink);
+}
+.nav-dropdown-col a:hover{ color: var(--sky); }
+.nav-dropdown-col a[aria-current="page"]{ color: var(--sky); font-weight:600; }
+
+@media (min-width: 761px){
+  .nav-dropdown-panel{
+    position:absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    background:#fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 16px 40px rgba(18,33,58,0.16);
+    grid-template-columns: repeat(4, 168px);
+    z-index: 60;
+  }
+}
+@media (max-width: 760px){
+  .nav-dropdown-panel{
+    grid-template-columns: 1fr;
+    padding: 6px 0 6px 16px;
+    gap: 16px;
+  }
+}
+
 /* -------------------- hero -------------------- */
 .hero{
   background: radial-gradient(120% 140% at 15% -10%, #1B3358 0%, var(--deep) 55%, #0D1830 100%);
