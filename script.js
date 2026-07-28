@@ -74,9 +74,24 @@
     });
   }
 
+  function initVideoCarousel() {
+    var track = document.getElementById("vrytify-video-carousel");
+    if (!track) return;
+    var prevBtn = document.querySelector(".carousel-btn.prev");
+    var nextBtn = document.querySelector(".carousel-btn.next");
+    var step = 258; // card width + gap
+    if (prevBtn) prevBtn.addEventListener("click", function () {
+      track.scrollBy({ left: -step, behavior: "smooth" });
+    });
+    if (nextBtn) nextBtn.addEventListener("click", function () {
+      track.scrollBy({ left: step, behavior: "smooth" });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLangSwitch();
     initMobileNav();
     initNavDropdown();
+    initVideoCarousel();
   });
 })();
