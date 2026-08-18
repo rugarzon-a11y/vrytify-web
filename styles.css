@@ -295,24 +295,11 @@ nav.main-nav a[aria-current="page"]::after{
     radial-gradient(2px 2px at 6% 60%, rgba(30,127,191,0.4) 0, transparent 60%);
   opacity: 1;
 }
-.hero::after{
-  content:"";
-  position:absolute;
-  right: -8%; top: 50%;
-  width: min(58vw, 720px);
-  height: min(58vw, 720px);
-  transform: translateY(-50%);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M28 30 L74 150 L100 150 L146 30 L118 30 L87 118 L56 30 Z' fill='white'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.05;
-  pointer-events: none;
-}
 .hero .wrap{ position:relative; }
 
 .hero-grid{
   display:grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: 56px;
   align-items:center;
 }
@@ -321,10 +308,15 @@ nav.main-nav a[aria-current="page"]::after{
 }
 .hero-photo{
   position:relative;
+  width: min(58vw, 720px);
+  margin-right: -6%;
   border-radius: 22px;
   overflow:hidden;
   box-shadow: 0 30px 70px rgba(0,0,0,0.4);
   border: 1px solid rgba(255,255,255,0.12);
+}
+@media (max-width: 900px){
+  .hero-photo{ width: 100%; margin-right: 0; }
 }
 .hero-photo::after{
   content:"";
