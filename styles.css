@@ -361,6 +361,7 @@ nav.main-nav a[aria-current="page"]::after{
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
+  font-weight: 700;
 }
 .hero p.lead{
   font-size: clamp(1rem, 1.6vw, 1.18rem);
