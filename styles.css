@@ -6,7 +6,6 @@
 :root{
   --deep: #12213A;       /* navy ink — primary dark */
   --deep-2: #1B3358;     /* navy, one step lighter, for panels */
-  --deep-3: #080F1D;     /* near-black navy — hero depth */
   --paper: #F5F6F1;      /* soft neutral paper background */
   --paper-2: #ECEEE6;    /* slightly deeper paper, for cards */
   --ink: #1C2733;        /* body text on paper */
@@ -14,14 +13,11 @@
   --line: #DFE2D9;       /* hairline borders on paper */
   --line-dark: rgba(255,255,255,0.14);
 
-  --sun:  #FFB703;
-  --leaf: #1FA05C;
-  --sky:  #1E7FBF;
-  --berry: #E8447A;
+  --sun:  #F2B705;
+  --leaf: #2E9C5A;
+  --sky:  #2C7DA0;
 
   --grad: linear-gradient(120deg, var(--sun) 0%, var(--leaf) 52%, var(--sky) 100%);
-  --grad-vivid: linear-gradient(120deg, var(--berry) 0%, var(--sun) 32%, var(--leaf) 66%, var(--sky) 100%);
-  --grad-culture: linear-gradient(120deg, #C1502E 0%, #D89B2A 38%, #7A8450 70%, #2C4A6E 100%);
   --grad-soft: linear-gradient(120deg, rgba(242,183,5,0.16) 0%, rgba(46,156,90,0.14) 52%, rgba(44,125,160,0.16) 100%);
 
   --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -277,24 +273,22 @@ nav.main-nav a[aria-current="page"]::after{
 
 /* -------------------- hero -------------------- */
 .hero{
-  background: radial-gradient(130% 150% at 12% -15%, #1B3358 0%, var(--deep) 45%, var(--deep-3) 100%);
+  background: radial-gradient(120% 140% at 15% -10%, #1B3358 0%, var(--deep) 55%, #0D1830 100%);
   color: #fff;
   position:relative;
   overflow:hidden;
-  padding: 104px 0 112px;
+  padding: 88px 0 96px;
 }
 .hero::before{
   content:"";
   position:absolute; inset:0;
   background-image:
-    radial-gradient(2.5px 2.5px at 12% 30%, rgba(255,183,3,0.6) 0, transparent 60%),
-    radial-gradient(2.5px 2.5px at 82% 22%, rgba(30,127,191,0.6) 0, transparent 60%),
-    radial-gradient(2.5px 2.5px at 68% 62%, rgba(31,160,92,0.55) 0, transparent 60%),
-    radial-gradient(2.5px 2.5px at 30% 78%, rgba(255,183,3,0.45) 0, transparent 60%),
-    radial-gradient(2.5px 2.5px at 90% 82%, rgba(31,160,92,0.45) 0, transparent 60%),
-    radial-gradient(2px 2px at 50% 12%, rgba(232,68,122,0.45) 0, transparent 60%),
-    radial-gradient(2px 2px at 6% 60%, rgba(30,127,191,0.4) 0, transparent 60%);
-  opacity: 1;
+    radial-gradient(2px 2px at 12% 30%, rgba(242,183,5,0.55) 0, transparent 60%),
+    radial-gradient(2px 2px at 82% 22%, rgba(44,125,160,0.55) 0, transparent 60%),
+    radial-gradient(2px 2px at 68% 62%, rgba(46,156,90,0.5) 0, transparent 60%),
+    radial-gradient(2px 2px at 30% 78%, rgba(242,183,5,0.4) 0, transparent 60%),
+    radial-gradient(2px 2px at 90% 82%, rgba(46,156,90,0.4) 0, transparent 60%);
+  opacity: 0.9;
 }
 .hero .wrap{ position:relative; }
 
@@ -322,7 +316,7 @@ nav.main-nav a[aria-current="page"]::after{
 .hero-photo::after{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(200deg, rgba(255,183,3,0.16) 0%, transparent 35%, transparent 65%, rgba(30,127,191,0.22) 100%);
+  background: linear-gradient(200deg, rgba(242,183,5,0.16) 0%, transparent 35%, transparent 65%, rgba(44,125,160,0.22) 100%);
   pointer-events:none;
 }
 .hero-photo img{
@@ -350,18 +344,17 @@ nav.main-nav a[aria-current="page"]::after{
 .hero h1{
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(2.4rem, 6vw, 4.1rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
   margin: 0 0 22px;
   max-width: 15ch;
 }
 .hero h1 .accent{
-  background: var(--grad-culture);
+  background: var(--grad);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
-  font-weight: 700;
 }
 .hero h1 .pop-word{
   color: #2ED573;
@@ -387,19 +380,16 @@ nav.main-nav a[aria-current="page"]::after{
   text-decoration:none;
   border: 1px solid transparent;
   cursor:pointer;
-  transition: transform .18s ease, box-shadow .18s ease;
 }
 .btn-primary{
-  background: #fff;
+  background: var(--grad);
   color: var(--deep);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
-.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 16px 32px rgba(0,0,0,0.24); }
 .btn-ghost{
   color: #fff;
   border-color: rgba(255,255,255,0.35);
 }
-.btn-ghost:hover{ border-color: #fff; transform: translateY(-2px); }
+.btn-ghost:hover{ border-color: #fff; }
 
 /* -------------------- sections on paper -------------------- */
 .section{ padding: 84px 0; }
@@ -486,33 +476,24 @@ nav.main-nav a[aria-current="page"]::after{
 .card{
   background: #fff;
   border: 1px solid var(--line);
-  border-top: 3px solid var(--sun);
   border-radius: var(--radius);
-  padding: 28px 26px;
-  transition: transform .2s ease, box-shadow .2s ease;
+  padding: 26px;
 }
-.card:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px rgba(18,33,58,0.1); }
-.grid-3 .card:nth-child(2){ border-top-color: var(--leaf); }
-.grid-3 .card:nth-child(3){ border-top-color: var(--sky); }
 .card .pin{
-  width: 38px; height:38px;
-  border-radius: 11px;
-  background: linear-gradient(135deg, rgba(255,183,3,0.16), rgba(255,183,3,0.05));
+  width: 34px; height:34px;
+  border-radius: 50%;
+  background: var(--grad-soft);
   position:relative;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
-.grid-3 .card:nth-child(2) .pin{ background: linear-gradient(135deg, rgba(31,160,92,0.16), rgba(31,160,92,0.05)); }
-.grid-3 .card:nth-child(3) .pin{ background: linear-gradient(135deg, rgba(30,127,191,0.16), rgba(30,127,191,0.05)); }
 .card .pin::after{
   content:"";
   position:absolute; left:50%; top:50%;
-  width:10px; height:10px;
+  width:9px; height:9px;
   border-radius:50%;
-  background: var(--sun);
+  background: var(--grad);
   transform:translate(-50%,-50%);
 }
-.grid-3 .card:nth-child(2) .pin::after{ background: var(--leaf); }
-.grid-3 .card:nth-child(3) .pin::after{ background: var(--sky); }
 .card h3{
   font-family: var(--display);
   font-size: 1.05rem;
@@ -850,41 +831,3 @@ details.faq-item[open] summary::after{
   z-index: 100;
 }
 .skip-link:focus{ left: 16px; top: 16px; }
-
-/* ============================================================
-   Signature: dot-trail → pin divider (echoes the logo motif)
-   ============================================================ */
-.trail-divider{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 7px;
-  padding: 6px 0 46px;
-}
-.trail-divider span{
-  display:block;
-  border-radius:50%;
-  background: var(--grad);
-}
-.trail-divider span:nth-child(1){ width:4px; height:4px; opacity:.5; }
-.trail-divider span:nth-child(2){ width:6px; height:6px; opacity:.65; }
-.trail-divider span:nth-child(3){ width:8px; height:8px; opacity:.8; }
-.trail-divider span:nth-child(4){ width:10px; height:10px; opacity:.95; }
-.trail-divider span:nth-child(5){
-  width:14px; height:14px; border-radius: 50% 50% 50% 0;
-  transform: rotate(45deg);
-  opacity: 1;
-}
-
-/* ============================================================
-   Scroll reveal
-   ============================================================ */
-.reveal{
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .6s ease, transform .6s ease;
-}
-.reveal.is-visible{ opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce){
-  .reveal{ opacity:1; transform:none; transition:none; }
-}
