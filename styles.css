@@ -21,6 +21,7 @@
 
   --grad: linear-gradient(120deg, var(--sun) 0%, var(--leaf) 52%, var(--sky) 100%);
   --grad-vivid: linear-gradient(120deg, var(--berry) 0%, var(--sun) 32%, var(--leaf) 66%, var(--sky) 100%);
+  --grad-culture: linear-gradient(120deg, #C1502E 0%, #D89B2A 38%, #7A8450 70%, #2C4A6E 100%);
   --grad-soft: linear-gradient(120deg, rgba(242,183,5,0.16) 0%, rgba(46,156,90,0.14) 52%, rgba(44,125,160,0.16) 100%);
 
   --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -356,7 +357,7 @@ nav.main-nav a[aria-current="page"]::after{
   max-width: 15ch;
 }
 .hero h1 .accent{
-  background: var(--grad-vivid);
+  background: var(--grad-culture);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
