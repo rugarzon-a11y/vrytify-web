@@ -91,7 +91,8 @@
     <aside class="toc">
       <h5><span data-lang-content="fr">Sommaire</span><span data-lang-content="es">Índice</span><span data-lang-content="en">Contents</span></h5>
       <ol>
-        <li><a href="#p1"><span data-lang-content="fr">Commissions échelonnées</span><span data-lang-content="es">Comisión escalonada</span><span data-lang-content="en">Tiered commission</span></a></li>
+        <li><a href="#p1"><span data-lang-content="fr">Commission fixe de lancement</span><span data-lang-content="es">Comisión fija de lanzamiento</span><span data-lang-content="en">Launch flat commission</span></a></li>
+        <li><a href="#p1b"><span data-lang-content="fr">Ce que couvre votre commission</span><span data-lang-content="es">Qué incluye tu comisión</span><span data-lang-content="en">What your commission covers</span></a></li>
         <li><a href="#p2"><span data-lang-content="fr">Flux de paiement</span><span data-lang-content="es">Flujo de pago</span><span data-lang-content="en">Payment flow</span></a></li>
         <li><a href="#p3"><span data-lang-content="fr">Frais Stripe selon l'origine</span><span data-lang-content="es">Comisiones Stripe según origen</span><span data-lang-content="en">Stripe fees by origin</span></a></li>
         <li><a href="#p4"><span data-lang-content="fr">Rétention de 14 jours</span><span data-lang-content="es">Retención de 14 días</span><span data-lang-content="en">14-day holding period</span></a></li>
@@ -125,37 +126,42 @@
 
       <!-- 1 -->
       <h2 id="p1"><span class="num">01</span>
-        <span data-lang-content="fr">Système de commission échelonnée</span>
-        <span data-lang-content="es">Sistema de comisión escalonada</span>
-        <span data-lang-content="en">Tiered commission system</span>
+        <span data-lang-content="fr">Commission fixe de lancement</span>
+        <span data-lang-content="es">Comisión fija de lanzamiento</span>
+        <span data-lang-content="en">Launch flat commission</span>
       </h2>
       <p>
-        <span data-lang-content="fr">Vrytify applique une commission qui diminue selon le volume cumulé de billets vendus depuis la création de votre compte. Plus vous vendez, plus votre commission baisse — et elle ne remonte jamais, même en cas de remboursement ultérieur.</span>
-        <span data-lang-content="es">Vrytify aplica una comisión que disminuye según el volumen acumulado de boletos vendidos desde la creación de tu cuenta. Mientras más vendes, más baja tu comisión — y nunca vuelve a subir, incluso si hay reembolsos posteriores.</span>
-        <span data-lang-content="en">Vrytify applies a commission that decreases based on the cumulative volume of tickets sold since your account was created. The more you sell, the lower your commission — and it never goes back up, even if refunds happen later.</span>
+        <span data-lang-content="fr">Au lancement, Vrytify applique une <strong>commission fixe de 12 %</strong> sur chaque billet vendu, quel que soit le volume de ventes du Créateur. Ce taux unique simplifie la compréhension pour tous les Créateurs dès le départ.</span>
+        <span data-lang-content="es">Al lanzamiento, Vrytify aplica una <strong>comisión fija del 12%</strong> sobre cada boleto vendido, sin importar el volumen de ventas del Creador. Esta tasa única simplifica la comprensión para todos los Creadores desde el inicio.</span>
+        <span data-lang-content="en">At launch, Vrytify applies a <strong>flat 12% commission</strong> on every ticket sold, regardless of the Creator's sales volume. This single rate keeps things simple for every Creator from day one.</span>
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th><span data-lang-content="fr">Palier</span><span data-lang-content="es">Tier</span><span data-lang-content="en">Tier</span></th>
-            <th><span data-lang-content="fr">Billets cumulés</span><span data-lang-content="es">Boletos acumulados</span><span data-lang-content="en">Cumulative tickets</span></th>
-            <th><span data-lang-content="fr">Commission</span><span data-lang-content="es">Comisión</span><span data-lang-content="en">Commission</span></th>
-            <th><span data-lang-content="fr">Sur un billet de 100$</span><span data-lang-content="es">Sobre un boleto de $100</span><span data-lang-content="en">On a $100 ticket</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>0–50</td><td>10%</td><td>$89.66</td></tr>
-          <tr><td>2</td><td>51–150</td><td>9%</td><td>$90.66</td></tr>
-          <tr><td>3</td><td>151–300</td><td>8%</td><td>$91.66</td></tr>
-          <tr><td>4</td><td>301–500</td><td>7.5%</td><td>$92.16</td></tr>
-          <tr><td>5</td><td>500+</td><td><span data-lang-content="fr">7% (plancher)</span><span data-lang-content="es">7% (piso)</span><span data-lang-content="en">7% (floor)</span></td><td>$92.66</td></tr>
-        </tbody>
-      </table>
+      <div class="callout">
+        <span data-lang-content="fr">🗺️ <strong>Feuille de route.</strong> Ce taux fixe de 12 % s'applique pendant la phase pilote et le lancement public initial. Une fois cette phase validée, Vrytify prévoit d'introduire un <strong>système de commission échelonnée</strong> (diminuant selon le volume cumulé de ventes, avec un plancher autour de 7 %) pour les Créateurs déjà actifs, dans le cadre d'une mise à jour ultérieure de cette politique. Aucune modification rétroactive ne sera appliquée aux ventes déjà réalisées.</span>
+        <span data-lang-content="es">🗺️ <strong>Hoja de ruta.</strong> Esta tasa fija del 12% aplica durante la fase piloto y el lanzamiento público inicial. Una vez validada esta fase, Vrytify prevé introducir un <strong>sistema de comisión escalonada</strong> (que disminuye según el volumen acumulado de ventas, con un piso alrededor del 7%) para los Creadores ya activos, como parte de una actualización posterior de esta política. Ningún cambio se aplicará retroactivamente a ventas ya realizadas.</span>
+        <span data-lang-content="en">🗺️ <strong>Roadmap.</strong> This flat 12% rate applies during the pilot phase and the initial public launch. Once this phase is validated, Vrytify plans to introduce a <strong>tiered commission system</strong> (decreasing based on cumulative sales volume, with a floor around 7%) for already-active Creators, as part of a later update to this policy. No change will be applied retroactively to sales already completed.</span>
+      </div>
+
+      <!-- 1b (new) -->
+      <h2 id="p1b"><span class="num">01b</span>
+        <span data-lang-content="fr">Ce que couvre votre commission</span>
+        <span data-lang-content="es">Qué incluye tu comisión</span>
+        <span data-lang-content="en">What your commission covers</span>
+      </h2>
       <p>
-        <span data-lang-content="fr">Le changement de palier est automatique et immédiat dès que le seuil est atteint. La commission de 7% est un plancher absolu — elle ne descend jamais plus bas.</span>
-        <span data-lang-content="es">El cambio de tier es automático e inmediato en cuanto se alcanza el umbral. La comisión del 7% es un piso absoluto — nunca baja de ahí.</span>
-        <span data-lang-content="en">The tier change is automatic and immediate as soon as the threshold is reached. The 7% commission is an absolute floor — it never goes lower.</span>
+        <span data-lang-content="fr">Ce 12 % ne finance pas seulement le traitement des paiements — il donne accès à l'ensemble de la plateforme Vrytify, sans frais additionnels :</span>
+        <span data-lang-content="es">Ese 12% no solo financia el procesamiento de pagos — te da acceso a toda la plataforma Vrytify, sin costos adicionales:</span>
+        <span data-lang-content="en">That 12% doesn't just fund payment processing — it gives you access to the entire Vrytify platform, at no extra cost:</span>
       </p>
+      <ul>
+        <li><span data-lang-content="fr"><strong>Découverte géolocalisée :</strong> votre événement est visible par les personnes réellement proches de vous, sans dépendre d'algorithmes payants.</span><span data-lang-content="es"><strong>Descubrimiento geolocalizado:</strong> tu evento es visible para las personas realmente cerca de ti, sin depender de algoritmos de pago.</span><span data-lang-content="en"><strong>Geolocated discovery:</strong> your event is visible to people who are genuinely nearby, without relying on paid algorithms.</span></li>
+        <li><span data-lang-content="fr"><strong>Communautés permanentes :</strong> vos participants restent connectés à votre niche après l'événement, contrairement à une billetterie à usage unique.</span><span data-lang-content="es"><strong>Comunidades permanentes:</strong> tus participantes permanecen conectados a tu nicho después del evento, a diferencia de una boletería de un solo uso.</span><span data-lang-content="en"><strong>Permanent communities:</strong> your participants stay connected to your niche after the event, unlike single-use ticketing tools.</span></li>
+        <li><span data-lang-content="fr"><strong>Trilingue dès le départ :</strong> votre événement est présenté en français, espagnol et anglais, sans traduction manuelle de votre part.</span><span data-lang-content="es"><strong>Trilingüe desde el inicio:</strong> tu evento se presenta en francés, español e inglés, sin traducción manual de tu parte.</span><span data-lang-content="en"><strong>Trilingual from day one:</strong> your event is presented in French, Spanish, and English, with no manual translation on your part.</span></li>
+        <li><span data-lang-content="fr"><strong>Panneau de statistiques :</strong> suivez vos ventes, votre audience et la performance de vos événements en temps réel.</span><span data-lang-content="es"><strong>Panel de estadísticas:</strong> sigue tus ventas, tu audiencia y el rendimiento de tus eventos en tiempo real.</span><span data-lang-content="en"><strong>Analytics dashboard:</strong> track your sales, audience, and event performance in real time.</span></li>
+        <li><span data-lang-content="fr"><strong>Billets QR intégrés :</strong> validation à l'entrée directement dans l'application, sans outil tiers.</span><span data-lang-content="es"><strong>Boletos QR integrados:</strong> validación en la entrada directamente en la aplicación, sin herramientas externas.</span><span data-lang-content="en"><strong>Built-in QR tickets:</strong> entry validation directly in the app, with no third-party tools needed.</span></li>
+        <li><span data-lang-content="fr"><strong>Tableau de demande :</strong> découvrez ce que les gens de votre région recherchent avant même de créer votre événement.</span><span data-lang-content="es"><strong>Tablero de demanda:</strong> descubre lo que la gente de tu región busca, incluso antes de crear tu evento.</span><span data-lang-content="en"><strong>Demand board:</strong> discover what people in your area are looking for, even before creating your event.</span></li>
+        <li><span data-lang-content="fr"><strong>Score de confiance :</strong> un historique de fiabilité qui vous distingue et rassure les participants.</span><span data-lang-content="es"><strong>Puntaje de confianza:</strong> un historial de fiabilidad que te distingue y tranquiliza a los participantes.</span><span data-lang-content="en"><strong>Trust score:</strong> a reliability track record that sets you apart and reassures participants.</span></li>
+        <li><span data-lang-content="fr"><strong>Outils d'organisation :</strong> duplication d'événements, liste d'attente automatique, annonces aux participants, questions-réponses privées.</span><span data-lang-content="es"><strong>Herramientas de organización:</strong> duplicación de eventos, lista de espera automática, anuncios a participantes, preguntas y respuestas privadas.</span><span data-lang-content="en"><strong>Organizer tools:</strong> event duplication, automatic waitlist, announcements to participants, private Q&A.</span></li>
+      </ul>
 
       <!-- 2 -->
       <h2 id="p2"><span class="num">02</span>
@@ -164,15 +170,15 @@
         <span data-lang-content="en">Payment flow</span>
       </h2>
       <p>
-        <span data-lang-content="fr">Exemple pour un billet de 100$ USD, Créateur au Palier 1 (10%) :</span>
-        <span data-lang-content="es">Ejemplo para un boleto de $100 USD, Creador en Tier 1 (10%):</span>
-        <span data-lang-content="en">Example for a $100 USD ticket, Creator at Tier 1 (10%):</span>
+        <span data-lang-content="fr">Exemple pour un billet de 100 $ USD, commission fixe de 12 % :</span>
+        <span data-lang-content="es">Ejemplo para un boleto de $100 USD, comisión fija del 12%:</span>
+        <span data-lang-content="en">Example for a $100 USD ticket, flat 12% commission:</span>
       </p>
       <ul>
         <li><span data-lang-content="fr">Le client paie <strong>103,19 $</strong> (prix + frais Stripe de 2,9 % + 0,30 $)</span><span data-lang-content="es">El cliente paga <strong>$103.19</strong> (precio + comisión de Stripe de 2.9% + $0.30)</span><span data-lang-content="en">The client pays <strong>$103.19</strong> (price + Stripe fee of 2.9% + $0.30)</span></li>
-        <li><span data-lang-content="fr">Vrytify reçoit 100 $ bruts, puis retient sa commission (10 $ au Palier 1)</span><span data-lang-content="es">Vrytify recibe $100 brutos, y retiene su comisión ($10 en Tier 1)</span><span data-lang-content="en">Vrytify receives $100 gross, then withholds its commission ($10 at Tier 1)</span></li>
+        <li><span data-lang-content="fr">Vrytify reçoit 100 $ bruts, puis retient sa commission fixe de 12 % (12 $)</span><span data-lang-content="es">Vrytify recibe $100 brutos, y retiene su comisión fija del 12% ($12)</span><span data-lang-content="en">Vrytify receives $100 gross, then withholds its flat 12% commission ($12)</span></li>
         <li><span data-lang-content="fr">Stripe applique des frais de transfert international de 1,36 % sur le montant versé au Créateur (à sa charge)</span><span data-lang-content="es">Stripe aplica un cargo de transferencia internacional del 1.36% sobre el monto pagado al Creador (a su cargo)</span><span data-lang-content="en">Stripe applies a 1.36% international transfer fee on the amount paid to the Creator (borne by the Creator)</span></li>
-        <li><span data-lang-content="fr">Le Créateur reçoit environ <strong>88,78 $</strong> dans son compte bancaire, sous 2 à 7 jours ouvrables</span><span data-lang-content="es">El Creador recibe aproximadamente <strong>$88.78</strong> en su cuenta bancaria, en 2 a 7 días hábiles</span><span data-lang-content="en">The Creator receives approximately <strong>$88.78</strong> in their bank account, within 2–7 business days</span></li>
+        <li><span data-lang-content="fr">Le Créateur reçoit environ <strong>86,80 $</strong> dans son compte bancaire, sous 2 à 7 jours ouvrables</span><span data-lang-content="es">El Creador recibe aproximadamente <strong>$86.80</strong> en su cuenta bancaria, en 2 a 7 días hábiles</span><span data-lang-content="en">The Creator receives approximately <strong>$86.80</strong> in their bank account, within 2–7 business days</span></li>
       </ul>
 
       <!-- 3 (new) -->
@@ -187,9 +193,9 @@
         <span data-lang-content="en">Note: at launch, only the "Canada – Canada" scenario applies. The other scenarios illustrate future international expansion phases.</span>
       </p>
       <p>
-        <span data-lang-content="fr">Stripe facture des frais différents selon le type de carte et le pays. Le tableau suivant illustre le cas d'un billet de 100 $ USD au Palier 1 (10 %), selon quatre scénarios réels :</span>
-        <span data-lang-content="es">Stripe cobra comisiones distintas según el tipo de tarjeta y el país. La siguiente tabla ilustra el caso de un boleto de $100 USD en Tier 1 (10%), según cuatro escenarios reales:</span>
-        <span data-lang-content="en">Stripe charges different fees depending on card type and country. The table below illustrates a $100 USD ticket at Tier 1 (10%), across four real-world scenarios:</span>
+        <span data-lang-content="fr">Stripe facture des frais différents selon le type de carte et le pays. Le tableau suivant illustre le cas d'un billet de 100 $ USD avec la commission fixe de 12 %, selon quatre scénarios réels :</span>
+        <span data-lang-content="es">Stripe cobra comisiones distintas según el tipo de tarjeta y el país. La siguiente tabla ilustra el caso de un boleto de $100 USD con la comisión fija del 12%, según cuatro escenarios reales:</span>
+        <span data-lang-content="en">Stripe charges different fees depending on card type and country. The table below illustrates a $100 USD ticket with the flat 12% commission, across four real-world scenarios:</span>
       </p>
       <table>
         <thead>
@@ -207,28 +213,28 @@
             <td>$105.12</td>
             <td>$5.12</td>
             <td>$94.88</td>
-            <td>$84.23</td>
+            <td>$82.88</td>
           </tr>
           <tr>
             <td><span data-lang-content="fr">Canada – Argentine</span><span data-lang-content="es">Canadá – Argentina</span><span data-lang-content="en">Canada – Argentina</span></td>
             <td>$105.12</td>
             <td>$5.12</td>
             <td>$94.88</td>
-            <td>$84.23*</td>
+            <td>$82.88*</td>
           </tr>
           <tr>
             <td><span data-lang-content="fr">Espagne – Canada</span><span data-lang-content="es">España – Canadá</span><span data-lang-content="en">Spain – Canada</span></td>
             <td>~€93</td>
             <td>$5.92</td>
             <td>$94.08</td>
-            <td>$83.52</td>
+            <td>$82.08</td>
           </tr>
           <tr>
             <td><span data-lang-content="fr">Argentine – Canada</span><span data-lang-content="es">Argentina – Canadá</span><span data-lang-content="en">Argentina – Canada</span></td>
             <td>~ARS 562 000</td>
             <td>$5.92</td>
             <td>$94.08</td>
-            <td>$83.52</td>
+            <td>$82.08</td>
           </tr>
         </tbody>
       </table>
@@ -238,9 +244,9 @@
         <span data-lang-content="en">* The creator in Argentina will receive this amount converted to Argentine pesos; their local bank may apply additional fees of $2–5 USD.</span>
       </p>
       <p>
-        <span data-lang-content="fr">En résumé, sur chaque 100 $ payés par un client : lorsque le client et le Créateur sont tous deux au Canada, environ <strong>84,2 %</strong> revient au Créateur ; lorsque l'un des deux est à l'étranger, environ <strong>83,5 %</strong> revient au Créateur — une différence d'environ 0,7 % due aux frais de conversion de devise.</span>
-        <span data-lang-content="es">En resumen, de cada $100 pagados por un cliente: cuando el cliente y el Creador están ambos en Canadá, aproximadamente el <strong>84.2%</strong> llega al Creador; cuando alguno de los dos está en el extranjero, aproximadamente el <strong>83.5%</strong> llega al Creador — una diferencia de alrededor de 0.7% debida a los cargos de conversión de divisa.</span>
-        <span data-lang-content="en">In summary, out of every $100 paid by a client: when both the client and the Creator are in Canada, about <strong>84.2%</strong> reaches the Creator; when either party is abroad, about <strong>83.5%</strong> reaches the Creator — a roughly 0.7% difference due to currency conversion fees.</span>
+        <span data-lang-content="fr">En résumé, sur chaque 100 $ payés par un client : lorsque le client et le Créateur sont tous deux au Canada, environ <strong>82,9 %</strong> revient au Créateur ; lorsque l'un des deux est à l'étranger, environ <strong>82,1 %</strong> revient au Créateur — une différence d'environ 0,8 % due aux frais de conversion de devise.</span>
+        <span data-lang-content="es">En resumen, de cada $100 pagados por un cliente: cuando el cliente y el Creador están ambos en Canadá, aproximadamente el <strong>82.9%</strong> llega al Creador; cuando alguno de los dos está en el extranjero, aproximadamente el <strong>82.1%</strong> llega al Creador — una diferencia de alrededor de 0.8% debida a los cargos de conversión de divisa.</span>
+        <span data-lang-content="en">In summary, out of every $100 paid by a client: when both the client and the Creator are in Canada, about <strong>82.9%</strong> reaches the Creator; when either party is abroad, about <strong>82.1%</strong> reaches the Creator — a roughly 0.8% difference due to currency conversion fees.</span>
       </p>
 
       <!-- 4 -->
@@ -458,11 +464,11 @@
         <span data-lang-content="en">Yes, via manual payout (minimum $100, no pending disputes, $2 cost, processed within 24–48h).</span>
       </p>
 
-      <h3><span data-lang-content="fr">Comment monte-t-on de palier ?</span><span data-lang-content="es">¿Cómo se sube de tier?</span><span data-lang-content="en">How do you move up a tier?</span></h3>
+      <h3><span data-lang-content="fr">Y aura-t-il une commission échelonnée plus tard ?</span><span data-lang-content="es">¿Habrá una comisión escalonada más adelante?</span><span data-lang-content="en">Will there be a tiered commission later?</span></h3>
       <p>
-        <span data-lang-content="fr">Automatiquement, selon le volume cumulé de billets vendus. Vous ne redescendez jamais de palier, même en cas de remboursement.</span>
-        <span data-lang-content="es">Automáticamente, según el volumen acumulado de boletos vendidos. Nunca bajas de tier, incluso si hay reembolsos.</span>
-        <span data-lang-content="en">Automatically, based on cumulative ticket sales volume. You never move down a tier, even if refunds occur.</span>
+        <span data-lang-content="fr">Oui — c'est prévu pour une phase ultérieure (après validation du lancement), une fois le volume et la stabilité de la plateforme confirmés. La commission fixe de 12 % s'applique pendant toute la phase pilote et le lancement public initial.</span>
+        <span data-lang-content="es">Sí — está previsto para una fase posterior (tras validar el lanzamiento), una vez confirmado el volumen y la estabilidad de la plataforma. La comisión fija del 12% aplica durante toda la fase piloto y el lanzamiento público inicial.</span>
+        <span data-lang-content="en">Yes — it's planned for a later phase (once the launch is validated), after confirming platform volume and stability. The flat 12% commission applies throughout the pilot phase and the initial public launch.</span>
       </p>
 
       <h3><span data-lang-content="fr">Que se passe-t-il si ma banque rejette le paiement ?</span><span data-lang-content="es">¿Qué pasa si mi banco rechaza el pago?</span><span data-lang-content="en">What happens if my bank rejects the payment?</span></h3>
