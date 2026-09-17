@@ -11,6 +11,12 @@
       "permanent": false
     }
   ],
+  "rewrites": [
+    {
+      "source": "/eventos/:id",
+      "destination": "/evento.html?id=:id"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -35,3 +41,5 @@
     }
   ]
 }
+
+  
