@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vrytify — Événement</title>
+<meta name="description" content="Découvre cet événement sur Vrytify." />
+<link rel="icon" href="/assets/logo-icon-256.png" />
+<meta property="og:title" content="Vrytify — Événement" />
+<meta property="og:description" content="Découvre cet événement sur Vrytify." />
+<meta property="og:type" content="website" />
+<style>
+  :root {
+    --ink: #1F2A44;
+    --gold: #B8860B;
+    --line: #E8E2D6;
+    --paper: #FBF8F2;
+    --card: #FFFFFF;
+    --coral: #E0463F;
+    --soft: #6B6558;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; background: var(--ink);
+  }
+  .topbar a { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-weight: 700; }
+  .topbar img { width: 28px; height: 28px; border-radius: 8px; }
+  .lang { display: flex; gap: 6px; }
+  .lang button {
+    background: rgba(255,255,255,.12); color: #fff; border: none; border-radius: 8px;
+    padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+  .lang button.active { background: var(--gold); }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 28px 20px 60px; }
+  .cover {
+    width: 100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden;
+    background: linear-gradient(135deg, #EFE7D6, #F7F2E6);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
+  }
+  .cover img { width: 100%; height: 100%; object-fit: cover; }
+  .cover .emoji { font-size: 74px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 14px; }
+  .row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 15px; color: var(--soft); }
+  .row b { color: var(--ink); font-weight: 600; }
+  .price {
+    display: inline-block; margin: 6px 0 18px; padding: 8px 16px; border-radius: 999px;
+    background: var(--ink); color: #fff; font-weight: 700; font-size: 14px;
+  }
+  .cta { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; padding: 15px; border-radius: 14px;
+    font-weight: 700; font-size: 15px;
+  }
+  .btn.primary { background: var(--coral); color: #fff; }
+  .btn.secondary { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+  .loading, .error { text-align: center; padding: 60px 20px; color: var(--soft); }
+  .footer { text-align: center; margin-top: 40px; font-size: 12px; color: var(--soft); }
+  .footer a { color: var(--soft); }
+  [data-lang] { display: none; }
+  [data-lang].active { display: inline; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="/index.html"><img src="/assets/logo-icon-256.png" alt="Vrytify" />Vrytify</a>
+    <div class="lang">
+      <button data-setlang="fr" class="active">FR</button>
+      <button data-setlang="es">ES</button>
+      <button data-setlang="en">EN</button>
+    </div>
+  </div>
+
+  <div class="wrap" id="content">
+    <div class="loading">
+      <span data-lang="fr" class="active">Chargement de l'événement…</span>
+      <span data-lang="es">Cargando el evento…</span>
+      <span data-lang="en">Loading event…</span>
+    </div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = "https://lpkcfxactklpkzykpxqh.supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_0QhKDsZSA1ZaAXrSk4IKxQ_vKVHu4cB";
+
+    const STR = {
+      fr: { loading: "Chargement de l'événement…", notFound: "Événement introuvable ou plus disponible.",
+        free: "Gratuit", organizedIn: "Organisé dans", online: "En ligne", hybrid: "Hybride",
+        openApp: "Voir dans l'app Vrytify", getApp: "Télécharger Vrytify", back: "← Retour à Vrytify" },
+      es: { loading: "Cargando el evento…", notFound: "Evento no encontrado o ya no disponible.",
+        free: "Gratis", organizedIn: "Organizado en", online: "En línea", hybrid: "Híbrido",
+        openApp: "Ver en la app Vrytify", getApp: "Descargar Vrytify", back: "← Volver a Vrytify" },
+      en: { loading: "Loading event…", notFound: "Event not found or no longer available.",
+        free: "Free", organizedIn: "Organized in", online: "Online", hybrid: "Hybrid",
+        openApp: "View in the Vrytify app", getApp: "Download Vrytify", back: "← Back to Vrytify" },
+    };
+    let lang = "fr";
+    document.querySelectorAll("[data-setlang]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        lang = btn.dataset.setlang;
+        document.querySelectorAll("[data-setlang]").forEach((b) => b.classList.toggle("active", b === btn));
+        document.querySelectorAll("[data-lang]").forEach((el) => el.classList.toggle("active", el.dataset.lang === lang));
+        render();
+      });
+    });
+
+    function getEventId() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("id")) return params.get("id");
+      const parts = window.location.pathname.split("/").filter(Boolean);
+      return parts[parts.length - 1] || null;
+    }
+
+    function formatDate(dateStr, timeStr) {
+      if (!dateStr) return "";
+      const d = new Date(dateStr + "T00:00:00");
+      const opts = { weekday: "long", day: "numeric", month: "long", year: "numeric" };
+      const localeMap = { fr: "fr-CA", es: "es-CO", en: "en-CA" };
+      let out = d.toLocaleDateString(localeMap[lang], opts);
+      out = out.charAt(0).toUpperCase() + out.slice(1);
+      if (timeStr && timeStr !== "—") out += ` · ${timeStr}`;
+      return out;
+    }
+
+    let eventData = null;
+
+    async function loadEvent() {
+      const id = getEventId();
+      const el = document.getElementById("content");
+      if (!id) { showError(); return; }
+      try {
+        const res = await fetch(
+          `${SUPABASE_URL}/rest/v1/events?id=eq.${id}&select=title,emoji,event_date,event_time,date_label,address,postal_code,price_cents,capacity,event_mode,cancelled,niches(name,photo_url)`,
+          { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
+        );
+        const rows = await res.json();
+        if (!Array.isArray(rows) || rows.length === 0 || rows[0].cancelled) { showError(); return; }
+        eventData = rows[0];
+        render();
+      } catch (e) {
+        showError();
+      }
+    }
+
+    function showError() {
+      const s = STR[lang];
+      document.getElementById("content").innerHTML = `
+        <div class="error">
+          <p>${s.notFound}</p>
+          <a class="btn secondary" href="/index.html" style="margin-top:16px; display:inline-block;">${s.back}</a>
+        </div>`;
+    }
+
+    function render() {
+      if (!eventData) return;
+      const s = STR[lang];
+      const e = eventData;
+      const cover = e.niches?.photo_url
+        ? `<img src="${e.niches.photo_url}" alt="" />`
+        : `<span class="emoji">${e.emoji || "✨"}</span>`;
+      const priceLabel = e.price_cents > 0 ? `${(e.price_cents / 100).toFixed(2)} $` : s.free;
+      const modeLabel = e.event_mode === "virtuel" ? s.online : e.event_mode === "hybride" ? s.hybrid : null;
+      const location = [e.address, e.postal_code].filter(Boolean).join(", ") || modeLabel || "";
+
+      document.getElementById("content").innerHTML = `
+        <div class="cover">${cover}</div>
+        <h1>${escapeHtml(e.title || "")}</h1>
+        <div class="row">📅 <div>${formatDate(e.event_date, e.event_time)}</div></div>
+        ${location ? `<div class="row">📍 <div>${escapeHtml(location)}</div></div>` : ""}
+        ${e.niches?.name ? `<div class="row">👥 <div>${s.organizedIn} <b>${escapeHtml(e.niches.name)}</b></div></div>` : ""}
+        <div class="price">${priceLabel}</div>
+        <div class="cta">
+          <a class="btn primary" href="https://vrytify.app">${s.openApp}</a>
+          <a class="btn secondary" href="https://vrytify.app">${s.getApp}</a>
+        </div>
+        <div class="footer"><a href="/index.html">${s.back}</a></div>
+      `;
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    loadEvent();
+  </script>
+</body>
+</html>
