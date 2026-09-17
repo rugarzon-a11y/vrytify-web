@@ -92,13 +92,13 @@
     const STR = {
       fr: { loading: "Chargement de l'événement…", notFound: "Événement introuvable ou plus disponible.",
         free: "Gratuit", organizedIn: "Organisé dans", online: "En ligne", hybrid: "Hybride",
-        openApp: "Voir dans l'app Vrytify", getApp: "Télécharger Vrytify", back: "← Retour à Vrytify" },
+        openApp: "Voir dans l'app Vrytify", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Retour à Vrytify" },
       es: { loading: "Cargando el evento…", notFound: "Evento no encontrado o ya no disponible.",
         free: "Gratis", organizedIn: "Organizado en", online: "En línea", hybrid: "Híbrido",
-        openApp: "Ver en la app Vrytify", getApp: "Descargar Vrytify", back: "← Volver a Vrytify" },
+        openApp: "Ver en la app Vrytify", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Volver a Vrytify" },
       en: { loading: "Loading event…", notFound: "Event not found or no longer available.",
         free: "Free", organizedIn: "Organized in", online: "Online", hybrid: "Hybrid",
-        openApp: "View in the Vrytify app", getApp: "Download Vrytify", back: "← Back to Vrytify" },
+        openApp: "View in the Vrytify app", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Back to Vrytify" },
     };
     let lang = "fr";
     document.querySelectorAll("[data-setlang]").forEach((btn) => {
@@ -176,8 +176,8 @@
         ${e.niches?.name ? `<div class="row">👥 <div>${s.organizedIn} <b>${escapeHtml(e.niches.name)}</b></div></div>` : ""}
         <div class="price">${priceLabel}</div>
         <div class="cta">
-          <a class="btn primary" href="https://vrytify.app">${s.openApp}</a>
-          <a class="btn secondary" href="https://vrytify.app">${s.getApp}</a>
+          <a class="btn primary" href="https://www.vrytify.com/android">📱 ${s.android}</a>
+          <a class="btn secondary" href="https://www.vrytify.com/ios">🍎 ${s.ios}</a>
         </div>
         <div class="footer"><a href="/index.html">${s.back}</a></div>
       `;
