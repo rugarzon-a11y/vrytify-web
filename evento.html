@@ -162,7 +162,7 @@
       const s = STR[lang];
       const e = eventData;
       const cover = e.niches?.photo_url
-        ? `<img src="${e.niches.photo_url}" alt="" />`
+        ? `<img src="${e.niches.photo_url}" alt="${escapeHtml(e.title || "Vrytify")}" />`
         : `<span class="emoji">${e.emoji || "✨"}</span>`;
       const priceLabel = e.price_cents > 0 ? `${(e.price_cents / 100).toFixed(2)} $` : s.free;
       const modeLabel = e.event_mode === "virtuel" ? s.online : e.event_mode === "hybride" ? s.hybrid : null;

@@ -33,6 +33,11 @@
       btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
     });
 
+    document.querySelectorAll("img[data-alt-fr]").forEach(function (img) {
+      var altText = img.getAttribute("data-alt-" + lang);
+      if (altText) img.setAttribute("alt", altText);
+    });
+
     try {
       window.localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
