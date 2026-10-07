@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vrytify App — Communautés et événements de proximité</title>
+<meta name="description" content="Vrytify App: application mobile qui relie communautés de proximité, groupes d'intérêt et événements. / Mobile app connecting local niche communities and events." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu / Ir al contenido / Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-icon-256.png" alt="Vrytify" class="brand-logo-img">
+      <span>Vrytify</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html">
+        <span data-lang-content="fr">Accueil</span><span data-lang-content="es">Inicio</span><span data-lang-content="en">Home</span>
+      </a>
+      <details class="nav-dropdown nav-products">
+        <summary>
+          <span data-lang-content="fr">Produits</span><span data-lang-content="es">Productos</span><span data-lang-content="en">Products</span>
+        </summary>
+        <div class="nav-dropdown-panel">
+          <div class="nav-dropdown-col">
+            <a href="app.html" aria-current="page">Vrytify App</a>
+            <a href="testimonio-en-vivo.html">Testimonio en vivo <small class="soon"><span data-lang-content="fr">en construction</span><span data-lang-content="es">en construcción</span><span data-lang-content="en">in development</span></small></a>
+          </div>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary>
+          <span data-lang-content="fr">Documents légaux</span><span data-lang-content="es">Documentos legales</span><span data-lang-content="en">Legal documents</span>
+        </summary>
+        <div class="nav-dropdown-panel">
+          <div class="nav-dropdown-col">
+          <h6><span data-lang-content="fr">Fondamentaux</span><span data-lang-content="es">Fundamentos</span><span data-lang-content="en">Core</span></h6>
+          <a href="privacidad.html"><span data-lang-content="fr">Confidentialité</span><span data-lang-content="es">Privacidad</span><span data-lang-content="en">Privacy</span></a>
+          <a href="terminos.html"><span data-lang-content="fr">Conditions d'utilisation</span><span data-lang-content="es">Términos de uso</span><span data-lang-content="en">Terms of Use</span></a>
+        </div>
+        <div class="nav-dropdown-col">
+          <h6><span data-lang-content="fr">Communauté & sécurité</span><span data-lang-content="es">Comunidad y seguridad</span><span data-lang-content="en">Community & safety</span></h6>
+          <a href="normas-comunidad.html"><span data-lang-content="fr">Normes de la communauté</span><span data-lang-content="es">Normas de la comunidad</span><span data-lang-content="en">Community Guidelines</span></a>
+          <a href="moderacion-reportes.html"><span data-lang-content="fr">Modération & signalement</span><span data-lang-content="es">Moderación y reportes</span><span data-lang-content="en">Moderation & reporting</span></a>
+          <a href="no-discriminacion-inclusion.html"><span data-lang-content="fr">Non-discrimination & inclusion</span><span data-lang-content="es">No discriminación e inclusión</span><span data-lang-content="en">Non-discrimination & inclusion</span></a>
+          <a href="seguridad.html"><span data-lang-content="fr">Sécurité</span><span data-lang-content="es">Seguridad</span><span data-lang-content="en">Safety</span></a>
+          <a href="seguridad-infantil.html"><span data-lang-content="fr">Sécurité infantile</span><span data-lang-content="es">Seguridad infantil</span><span data-lang-content="en">Child safety</span></a>
+          <a href="identidad-edad.html"><span data-lang-content="fr">Vérification de l'âge</span><span data-lang-content="es">Verificación de edad</span><span data-lang-content="en">Age verification</span></a>
+        </div>
+        <div class="nav-dropdown-col">
+          <h6><span data-lang-content="fr">Waivers</span><span data-lang-content="es">Waivers</span><span data-lang-content="en">Waivers</span></h6>
+          <a href="waiver-participante.html"><span data-lang-content="fr">Waiver participant</span><span data-lang-content="es">Waiver participante</span><span data-lang-content="en">Participant waiver</span></a>
+          <a href="waiver-creador.html"><span data-lang-content="fr">Waiver créateur</span><span data-lang-content="es">Waiver creador</span><span data-lang-content="en">Creator waiver</span></a>
+          <a href="disposiciones-compartidas.html"><span data-lang-content="fr">Dispositions partagées</span><span data-lang-content="es">Disposiciones compartidas</span><span data-lang-content="en">Shared provisions</span></a>
+        </div>
+        <div class="nav-dropdown-col">
+          <h6><span data-lang-content="fr">Données</span><span data-lang-content="es">Datos</span><span data-lang-content="en">Data</span></h6>
+          <a href="eliminar-datos.html"><span data-lang-content="fr">Supprimer mes données</span><span data-lang-content="es">Eliminar mis datos</span><span data-lang-content="en">Delete my data</span></a>
+        </div>
+        </div>
+      </details>
+      <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Langue / Idioma / Language">
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span data-lang-content="fr">Vrytify App</span>
+            <span data-lang-content="es">Vrytify App</span>
+            <span data-lang-content="en">Vrytify App</span>
+          </p>
+          <h1>
+            <span data-lang-content="fr"><span class="accent">Des micro-communautés locales, transformées en rencontres</span> <span class="pop-word">réelles</span>.</span>
+            <span data-lang-content="es"><span class="accent">Micro-comunidades locales, convertidas en encuentros</span> <span class="pop-word">reales</span>.</span>
+            <span data-lang-content="en"><span class="accent">Local niche communities, turned into</span> <span class="pop-word">real</span> encounters.</span>
+          </h1>
+          <p class="lead">
+            <span data-lang-content="fr">Vrytify est une plateforme mobile qui relie communautés géographiques, groupes d'intérêt, événements et découvertes de proximité — le tout dans une seule application, pensée pour le Québec puis pour le monde.</span>
+            <span data-lang-content="es">Vrytify es una plataforma móvil que conecta comunidades geográficas, grupos de interés, eventos y descubrimiento de proximidad — todo en una sola aplicación, pensada para Quebec y luego para el mundo.</span>
+            <span data-lang-content="en">Vrytify is a mobile platform connecting geographic communities, interest groups, events, and nearby discovery — all in one app, designed for Quebec first and the world next.</span>
+          </p>
+          <p class="lead" style="font-style:italic; opacity:0.85; font-size:1rem; margin-top:-16px;">
+            <span data-lang-content="fr">Plus de passion. Plus de communauté. Plus de réalité.</span>
+            <span data-lang-content="es">Más pasión. Más comunidad. Más realidad.</span>
+            <span data-lang-content="en">More passion. More community. More reality.</span>
+          </p>
+          <div class="hero-actions">
+            <a href="privacidad.html" class="btn btn-primary">
+              <span data-lang-content="fr">Politique de confidentialité</span>
+              <span data-lang-content="es">Política de privacidad</span>
+              <span data-lang-content="en">Privacy Policy</span>
+            </a>
+            <a href="terminos.html" class="btn btn-ghost">
+              <span data-lang-content="fr">Conditions d'utilisation</span>
+              <span data-lang-content="es">Términos de uso</span>
+              <span data-lang-content="en">Terms of Use</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/hero-community.jpg" alt="Un groupe divers d'amis riant ensemble dans un parc" data-alt-fr="Un groupe divers d'amis riant ensemble dans un parc" data-alt-es="Un grupo diverso de amigos riendo juntos en un parque" data-alt-en="A diverse group of friends laughing together in a park">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IS VERYNEXO ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">
+          <span data-lang-content="fr">L'application</span>
+          <span data-lang-content="es">La aplicación</span>
+          <span data-lang-content="en">The app</span>
+        </p>
+        <h2>
+          <span data-lang-content="fr">Une seule appli pour découvrir, organiser et se retrouver</span>
+          <span data-lang-content="es">Una sola app para descubrir, organizar y encontrarse</span>
+          <span data-lang-content="en">One app to discover, organize, and meet</span>
+        </h2>
+        <p>
+          <span data-lang-content="fr">Vrytify combine des communautés géolocalisées, des groupes de niche, des événements payants, un tableau de demande et un outil de recherche de compagnons.</span>
+          <span data-lang-content="es">Vrytify combina micro-comunidades geolocalizadas, grupos de nicho, eventos pagos, un tablero de demanda y una herramienta para encontrar acompañantes.</span>
+          <span data-lang-content="en">Vrytify combines geolocated micro-communities, niche interest groups, paid events, a demand board, and a companion-finder tool.</span>
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="pin" aria-hidden="true"></div>
+          <h3>
+            <span data-lang-content="fr">Communautés de proximité</span>
+            <span data-lang-content="es">Comunidades de proximidad</span>
+            <span data-lang-content="en">Nearby communities</span>
+          </h3>
+          <p>
+            <span data-lang-content="fr">Trouvez des groupes actifs près de chez vous, organisés autour de vos centres d'intérêt réels.</span>
+            <span data-lang-content="es">Encuentra grupos activos cerca de ti, organizados alrededor de tus intereses reales.</span>
+            <span data-lang-content="en">Find active groups near you, organized around your real interests.</span>
+          </p>
+        </div>
+        <div class="card">
+          <div class="pin" aria-hidden="true"></div>
+          <h3>
+            <span data-lang-content="fr">Événements, gratuits ou payants</span>
+            <span data-lang-content="es">Eventos, gratuitos o pagos</span>
+            <span data-lang-content="en">Free or paid events</span>
+          </h3>
+          <p>
+            <span data-lang-content="fr">Créez ou rejoignez des activités concrètes, avec billetterie intégrée via Stripe.</span>
+            <span data-lang-content="es">Crea o únete a actividades concretas, con boletería integrada vía Stripe.</span>
+            <span data-lang-content="en">Create or join real activities, with ticketing built in through Stripe.</span>
+          </p>
+        </div>
+        <div class="card">
+          <div class="pin" aria-hidden="true"></div>
+          <h3>
+            <span data-lang-content="fr">Tableau de demande</span>
+            <span data-lang-content="es">Tablero de demanda</span>
+            <span data-lang-content="en">Demand board</span>
+          </h3>
+          <p>
+            <span data-lang-content="fr">Exprimez ce que vous aimeriez trouver, même si ça n'existe pas encore près de chez vous.</span>
+            <span data-lang-content="es">Expresa lo que te gustaría encontrar, incluso si todavía no existe cerca de ti.</span>
+            <span data-lang-content="en">Say what you wish existed nearby, even before anyone has created it.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POINTER TO COMPANY ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0;">
+        <p class="eyebrow">
+          <span data-lang-content="fr">L'entreprise</span>
+          <span data-lang-content="es">La empresa</span>
+          <span data-lang-content="en">The company</span>
+        </p>
+        <h2>Vrytify Laboratoires inc.</h2>
+        <p style="margin-bottom:22px;">
+          <span data-lang-content="fr">Vrytify App est développée et exploitée par Vrytify Laboratoires inc. / Vrytify Laboratories Inc., société canadienne qui conçoit des applications et des logiciels pour des besoins socioprofessionnels.</span>
+          <span data-lang-content="es">Vrytify App es desarrollada y operada por Vrytify Laboratoires inc. / Vrytify Laboratories Inc., empresa canadiense que diseña aplicaciones y software para necesidades socioprofesionales.</span>
+          <span data-lang-content="en">Vrytify App is developed and operated by Vrytify Laboratoires inc. / Vrytify Laboratories Inc., a Canadian company that designs apps and software for socio-professional needs.</span>
+        </p>
+        <a href="index.html" class="btn btn-primary">
+          <span data-lang-content="fr">Découvrir l'entreprise</span>
+          <span data-lang-content="es">Conocer la empresa</span>
+          <span data-lang-content="en">About the company</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Vrytify</h4>
+        <address>
+          Saint-Jean-sur-Richelieu, Québec<br>
+          Canada
+        </address>
+        <p style="margin-top:10px;">contact@vrytify.com</p>
+      </div>
+      <div>
+        <h4>
+          <span data-lang-content="fr">Légal</span>
+          <span data-lang-content="es">Legal</span>
+          <span data-lang-content="en">Legal</span>
+        </h4>
+        <ul>
+          <li><a href="privacidad.html">
+            <span data-lang-content="fr">Politique de confidentialité</span>
+            <span data-lang-content="es">Política de privacidad</span>
+            <span data-lang-content="en">Privacy Policy</span>
+          </a></li>
+          <li><a href="terminos.html">
+            <span data-lang-content="fr">Conditions d'utilisation</span>
+            <span data-lang-content="es">Términos de uso</span>
+            <span data-lang-content="en">Terms of Use</span>
+          </a></li>
+          <li><a href="normas-comunidad.html">
+            <span data-lang-content="fr">Normes de la communauté</span>
+            <span data-lang-content="es">Normas de la comunidad</span>
+            <span data-lang-content="en">Community Guidelines</span>
+          </a></li>
+          <li><a href="moderacion-reportes.html">
+            <span data-lang-content="fr">Modération & signalement</span>
+            <span data-lang-content="es">Moderación y reportes</span>
+            <span data-lang-content="en">Moderation & reporting</span>
+          </a></li>
+          <li><a href="no-discriminacion-inclusion.html">
+            <span data-lang-content="fr">Non-discrimination & inclusion</span>
+            <span data-lang-content="es">No discriminación e inclusión</span>
+            <span data-lang-content="en">Non-discrimination & inclusion</span>
+          </a></li>
+          <li><a href="seguridad-infantil.html">
+            <span data-lang-content="fr">Sécurité infantile</span>
+            <span data-lang-content="es">Seguridad infantil</span>
+            <span data-lang-content="en">Child safety</span>
+          </a></li>
+          <li><a href="seguridad.html">
+            <span data-lang-content="fr">Guide de sécurité</span>
+            <span data-lang-content="es">Guía de seguridad</span>
+            <span data-lang-content="en">Safety Guidelines</span>
+          </a></li>
+          <li><a href="identidad-edad.html">
+            <span data-lang-content="fr">Vérification de l'âge</span>
+            <span data-lang-content="es">Verificación de edad</span>
+            <span data-lang-content="en">Age Verification</span>
+          </a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="waiver-participante.html">
+            <span data-lang-content="fr">Waiver participant</span>
+            <span data-lang-content="es">Waiver participante</span>
+            <span data-lang-content="en">Participant waiver</span>
+          </a></li>
+          <li><a href="waiver-creador.html">
+            <span data-lang-content="fr">Waiver créateur</span>
+            <span data-lang-content="es">Waiver creador</span>
+            <span data-lang-content="en">Creator waiver</span>
+          </a></li>
+          <li><a href="disposiciones-compartidas.html">
+            <span data-lang-content="fr">Dispositions partagées</span>
+            <span data-lang-content="es">Disposiciones compartidas</span>
+            <span data-lang-content="en">Shared provisions</span>
+          </a></li>
+          <li><a href="eliminar-datos.html">
+            <span data-lang-content="fr">Supprimer mes données</span>
+            <span data-lang-content="es">Eliminar mis datos</span>
+            <span data-lang-content="en">Delete my data</span>
+          </a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>
+          <span data-lang-content="fr">Entreprise & produits</span>
+          <span data-lang-content="es">Empresa y productos</span>
+          <span data-lang-content="en">Company & products</span>
+        </h4>
+        <ul>
+          <li><a href="index.html">
+            <span data-lang-content="fr">L'entreprise</span>
+            <span data-lang-content="es">La empresa</span>
+            <span data-lang-content="en">The company</span>
+          </a></li>
+          <li><a href="app.html">Vrytify App</a></li>
+          <li><a href="testimonio-en-vivo.html">Testimonio en vivo <small class="soon-foot">(<span data-lang-content="fr">en construction</span><span data-lang-content="es">en construcción</span><span data-lang-content="en">in development</span>)</small></a></li>
+          <li><a href="https://vrytify.app">vrytify.app</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Vrytify Laboratories Inc. / Vrytify Laboratoires inc.</span>
+      <span>
+        <span data-lang-content="fr">Constituée au Canada — #1818910-2</span>
+        <span data-lang-content="es">Constituida en Canadá — N.º 1818910-2</span>
+        <span data-lang-content="en">Incorporated in Canada — No. 1818910-2</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
