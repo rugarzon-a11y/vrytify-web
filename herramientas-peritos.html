@@ -67,9 +67,6 @@
         </div>
         </div>
       </details>
-      <a href="testimonio-en-vivo.html">
-        Testimonio en vivo
-      </a>
       <a href="herramientas-peritos.html" aria-current="page">
         <span data-lang-content="fr">Outils pour experts</span><span data-lang-content="es">Herramientas para peritos</span><span data-lang-content="en">Expert witness tools</span>
       </a>
@@ -117,7 +114,7 @@
           <h3><span data-lang-content="fr">Simulateur d'audience orale</span><span data-lang-content="es">Simulador de audiencia oral</span><span data-lang-content="en">Oral hearing simulator</span><span class="badge badge-soon tool-soon"><span data-lang-content="fr">Bientôt disponible</span><span data-lang-content="es">Próximamente</span><span data-lang-content="en">Coming soon</span></span></h3>
           <p class="tool-desc"><span data-lang-content="fr">Entraînez-vous au contre-interrogatoire avant l'audience et recevez une évaluation de vos réponses.</span><span data-lang-content="es">Practica el contrainterrogatorio antes de la audiencia y recibe una evaluación de tus respuestas.</span><span data-lang-content="en">Practise cross-examination before the hearing and get an assessment of your answers.</span></p>
           <p class="tool-price"><strong>USD 20</strong></p>
-          <span class="btn btn-primary btn-disabled" id="tool-simulador" role="link" aria-disabled="true"><span data-lang-content="fr">En savoir plus</span><span data-lang-content="es">Ver más</span><span data-lang-content="en">Learn more</span></span>
+          <a class="btn btn-primary" id="tool-simulador" href="testimonio-en-vivo.html" target="_blank" rel="noopener noreferrer"><span data-lang-content="fr">En savoir plus</span><span data-lang-content="es">Ver más</span><span data-lang-content="en">Learn more</span></a>
         </div>
       </div>
 
@@ -157,7 +154,6 @@
         <ul>
           <li><a href="index.html"><span data-lang-content="fr">L'entreprise</span><span data-lang-content="es">La empresa</span><span data-lang-content="en">The company</span></a></li>
           <li><a href="app.html">Vrytify App</a></li>
-          <li><a href="testimonio-en-vivo.html">Testimonio en vivo <small class="soon-foot">(<span data-lang-content="fr">en construction</span><span data-lang-content="es">en construcción</span><span data-lang-content="en">in development</span>)</small></a></li>
           <li><a href="herramientas-peritos.html"><span data-lang-content="fr">Outils pour experts</span><span data-lang-content="es">Herramientas para peritos</span><span data-lang-content="en">Expert witness tools</span></a></li>
         </ul>
       </div>
@@ -179,31 +175,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-/* ============================================================
-   ENLACE DEL SIMULADOR DE AUDIENCIA ORAL  (único lugar a cambiar)
-   Hoy está vacío = botón desactivado + etiqueta "Próximamente".
-   Cuando el simulador exista, pegue su dirección entre las
-   comillas, por ejemplo:  "https://simulador.vrytify.com"
-   y la etiqueta "Próximamente" desaparece sola.
-   ============================================================ */
-var SIMULADOR_URL = "";
-
-(function () {
-  var btn = document.getElementById("tool-simulador");
-  if (!btn || !SIMULADOR_URL) return;
-  var a = document.createElement("a");
-  a.className = "btn btn-primary";
-  a.id = "tool-simulador";
-  a.href = SIMULADOR_URL;
-  a.target = "_blank";
-  a.rel = "noopener noreferrer";
-  a.innerHTML = btn.innerHTML;
-  btn.parentNode.replaceChild(a, btn);
-  var soon = document.querySelector(".tool-soon");
-  if (soon) soon.parentNode.removeChild(soon);
-})();
-</script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

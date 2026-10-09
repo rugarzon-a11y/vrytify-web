@@ -68,10 +68,7 @@
         </div>
         </div>
       </details>
-      <a href="testimonio-en-vivo.html" aria-current="page">
-        Testimonio en vivo
-      </a>
-      <a href="herramientas-peritos.html">
+      <a href="herramientas-peritos.html" aria-current="page">
         <span data-lang-content="fr">Outils pour experts</span><span data-lang-content="es">Herramientas para peritos</span><span data-lang-content="en">Expert witness tools</span>
       </a>
     </nav>
@@ -137,6 +134,16 @@
 
   <section class="section">
     <div class="wrap">
+      <div class="bundle-line">
+        <p><strong><span data-lang-content="fr">Simulateur d'audience orale</span><span data-lang-content="es">Simulador de audiencia oral</span><span data-lang-content="en">Oral hearing simulator</span></strong> · USD 20 <span class="badge badge-soon tool-soon" style="margin-left:8px;"><span data-lang-content="fr">Bientôt disponible</span><span data-lang-content="es">Próximamente</span><span data-lang-content="en">Coming soon</span></span></p>
+        <span class="btn btn-primary btn-disabled" id="tool-comprar" role="link" aria-disabled="true"><span data-lang-content="fr">Acheter</span><span data-lang-content="es">Comprar</span><span data-lang-content="en">Buy</span></span>
+      </div>
+      <p style="margin-top:18px;"><a class="inline" style="color:var(--sky);font-weight:600;text-decoration:none;" href="herramientas-peritos.html"><span data-lang-content="fr">← Retour aux outils pour experts</span><span data-lang-content="es">← Volver a Herramientas para peritos</span><span data-lang-content="en">← Back to expert witness tools</span></a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
       <div class="notice">
         <p class="notice-p"><strong><span data-lang-content="fr">À noter.</span><span data-lang-content="es">Importante.</span><span data-lang-content="en">Please note.</span></strong> <span data-lang-content="fr">Cet outil sera un outil de formation et de préparation. Il ne constitue pas un avis juridique et ne remplace ni le jugement professionnel, ni la supervision, ni les règles de l'ordre professionnel de l'utilisateur.</span><span data-lang-content="es">Esta herramienta será un instrumento de formación y preparación. No constituye asesoría jurídica y no reemplaza el juicio profesional, la supervisión ni las normas del colegio profesional del usuario.</span><span data-lang-content="en">This tool will be a training and preparation aid. It is not legal advice and does not replace professional judgment, supervision or the rules of the user's professional order.</span></p>
       </div>
@@ -173,8 +180,7 @@
         <ul>
           <li><a href="index.html"><span data-lang-content="fr">L'entreprise</span><span data-lang-content="es">La empresa</span><span data-lang-content="en">The company</span></a></li>
           <li><a href="app.html">Vrytify App</a></li>
-          <li><a href="testimonio-en-vivo.html">Testimonio en vivo <small class="soon-foot">(<span data-lang-content="fr">en construction</span><span data-lang-content="es">en construcción</span><span data-lang-content="en">in development</span>)</small></a></li>
-          <li><a href="herramientas-peritos.html"><span data-lang-content="fr">Outils pour experts</span><span data-lang-content="es">Herramientas para peritos</span><span data-lang-content="en">Expert witness tools</span></a></li>
+          <li><a href="herramientas-peritos.html" aria-current="page"><span data-lang-content="fr">Outils pour experts</span><span data-lang-content="es">Herramientas para peritos</span><span data-lang-content="en">Expert witness tools</span></a></li>
         </ul>
       </div>
       <div>
@@ -195,6 +201,31 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+/* ============================================================
+   ENLACE DE COMPRA DEL SIMULADOR  (único lugar a cambiar)
+   Hoy está vacío = botón "Comprar" desactivado + "Próximamente".
+   Cuando abra la venta, pegue la dirección entre las comillas,
+   por ejemplo:  "https://audiencia.vrytify.com/#precio"
+   y el botón se activa solo.
+   ============================================================ */
+var COMPRA_URL = "";
+
+(function () {
+  var btn = document.getElementById("tool-comprar");
+  if (!btn || !COMPRA_URL) return;
+  var a = document.createElement("a");
+  a.className = "btn btn-primary";
+  a.id = "tool-comprar";
+  a.href = COMPRA_URL;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.innerHTML = btn.innerHTML;
+  btn.parentNode.replaceChild(a, btn);
+  var soon = document.querySelector(".bundle-line .tool-soon");
+  if (soon) soon.parentNode.removeChild(soon);
+})();
+</script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
