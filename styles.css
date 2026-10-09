@@ -1084,3 +1084,8 @@ small.soon-foot{ color:#8FA2B8; font-size:0.8rem; }
   .bundle-line{ padding:20px; }
   .bundle-line .btn{ width:100%; justify-content:center; }
 }
+
+.tool-card .btn-outline{ background:transparent; color: var(--deep); border-color: var(--deep); }
+.tool-card .btn-outline:hover{ background: rgba(18,33,58,0.06); }
+.tool-card .tool-bundle{ margin:16px 0 10px; font-size:0.88rem; color: var(--muted); }
+.tool-card .tool-bundle strong{ color: var(--deep); }
