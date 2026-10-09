@@ -1058,3 +1058,29 @@ small.soon-foot{ color:#8FA2B8; font-size:0.8rem; }
 .doc-links a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .card h3.small-h{ font-size:0.74rem; font-family: var(--mono); letter-spacing:0.07em; text-transform:uppercase; color: var(--muted); margin:0; }
 .nav-dropdown-col{ align-content: start; }
+
+/* -------------------- Herramientas para peritos -------------------- */
+.tool-card{ display:flex; flex-direction:column; }
+.tool-card h3{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; }
+.tool-card .tool-desc{ flex:1 1 auto; margin-bottom:18px; }
+.tool-card .tool-price{ margin:0 0 18px; font-size:0.9rem; color: var(--muted); }
+.tool-card .tool-price strong{ font-family: var(--display); font-size:1.6rem; color: var(--deep); }
+.tool-card .btn{ align-self:flex-start; }
+.tool-card .tool-soon{ font-size:0.68rem; }
+.btn-disabled, .btn-disabled:hover{
+  background: #E6E8E3; color:#7A8494; cursor:not-allowed; pointer-events:none;
+}
+.bundle-line{
+  margin-top: 28px;
+  display:flex; align-items:center; justify-content:space-between; gap:18px 28px; flex-wrap:wrap;
+  padding: 22px 26px;
+  border: 1px solid rgba(242,183,5,0.55);
+  background: rgba(242,183,5,0.12);
+  border-radius: var(--radius);
+}
+.bundle-line p{ margin:0; font-size:1.05rem; color: var(--ink); }
+.bundle-line strong{ color: var(--deep); }
+@media (max-width: 560px){
+  .bundle-line{ padding:20px; }
+  .bundle-line .btn{ width:100%; justify-content:center; }
+}
