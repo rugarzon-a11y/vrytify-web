@@ -1087,5 +1087,21 @@ small.soon-foot{ color:#8FA2B8; font-size:0.8rem; }
 
 .tool-card .btn-outline{ background:transparent; color: var(--deep); border-color: var(--deep); }
 .tool-card .btn-outline:hover{ background: rgba(18,33,58,0.06); }
-.tool-card .tool-bundle{ margin:16px 0 10px; font-size:0.88rem; color: var(--muted); }
-.tool-card .tool-bundle strong{ color: var(--deep); }
+.tool-options{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; }
+.tool-option{ display:flex; flex-direction:column; align-items:flex-start; }
+.tool-option-bundle{ border-left:1px solid var(--line); padding-left:14px; }
+.tool-option .tool-label{ margin:0 0 4px; font-family: var(--mono); font-size:0.68rem; letter-spacing:0.07em; text-transform:uppercase; color: var(--muted); }
+.tool-option .tool-price{ margin:0; }
+.tool-option .tool-note{ margin:0 0 14px; font-size:0.78rem; color: var(--muted); flex:1 1 auto; }
+.tool-option .btn{ padding:11px 18px; font-size:0.88rem; }
+
+@media (max-width: 1100px) and (min-width: 821px){
+  .tool-options{ grid-template-columns:1fr; }
+  .tool-option-bundle{ border-left:0; padding-left:0; border-top:1px solid var(--line); padding-top:14px; }
+}
+@media (max-width: 420px){
+  .tool-options{ grid-template-columns:1fr; }
+  .tool-option-bundle{ border-left:0; padding-left:0; border-top:1px solid var(--line); padding-top:14px; }
+}
+.tool-option .tool-price strong{ white-space:nowrap; }
+.tool-option .btn{ white-space:nowrap; }
