@@ -113,7 +113,7 @@
           <div class="pin" aria-hidden="true"></div>
           <h3><span data-lang-content="fr">Simulateur d'audience orale</span><span data-lang-content="es">Simulador de audiencia oral</span><span data-lang-content="en">Oral hearing simulator</span><span class="badge badge-soon tool-soon"><span data-lang-content="fr">Bientôt disponible</span><span data-lang-content="es">Próximamente</span><span data-lang-content="en">Coming soon</span></span></h3>
           <p class="tool-desc"><span data-lang-content="fr">Entraînez-vous au contre-interrogatoire avant l'audience et recevez une évaluation de vos réponses.</span><span data-lang-content="es">Practica el contrainterrogatorio antes de la audiencia y recibe una evaluación de tus respuestas.</span><span data-lang-content="en">Practise cross-examination before the hearing and get an assessment of your answers.</span></p>
-          <p class="tool-price"><strong>USD 20</strong></p>
+          <p class="tool-price"><strong>USD 12</strong> <span>· <span data-lang-content="fr">par mois</span><span data-lang-content="es">al mes</span><span data-lang-content="en">per month</span></span></p>
           <a class="btn btn-primary" id="tool-simulador" href="testimonio-en-vivo.html" target="_blank" rel="noopener noreferrer"><span data-lang-content="fr">En savoir plus</span><span data-lang-content="es">Ver más</span><span data-lang-content="en">Learn more</span></a>
         </div>
       </div>
@@ -121,10 +121,6 @@
       <div class="bundle-line">
         <p><strong><span data-lang-content="fr">Forfait 15 :</span><span data-lang-content="es">Paquete 15:</span><span data-lang-content="en">Bundle 15:</span></strong> Checklist Dictamen + CotizaPerito : <strong>USD 15</strong></p>
         <a class="btn btn-primary" id="tool-paquete" href="https://checklist.vrytify.com/#precio" target="_blank" rel="noopener noreferrer"><span data-lang-content="fr">Voir le forfait</span><span data-lang-content="es">Ver paquete</span><span data-lang-content="en">See the bundle</span></a>
-      </div>
-      <div class="bundle-line">
-        <p><strong><span data-lang-content="fr">Forfait 25 :</span><span data-lang-content="es">Paquete 25:</span><span data-lang-content="en">Bundle 25:</span></strong> Checklist Dictamen, CotizaPerito <span data-lang-content="fr">et simulateur d'audience orale</span><span data-lang-content="es">y simulador de audiencia oral</span><span data-lang-content="en">and oral hearing simulator</span> : <strong>USD 25</strong> <span class="badge badge-soon tool-soon" style="margin-left:8px;"><span data-lang-content="fr">Bientôt disponible</span><span data-lang-content="es">Próximamente</span><span data-lang-content="en">Coming soon</span></span></p>
-        <span class="btn btn-primary btn-disabled" id="tool-paquete-completo" role="link" aria-disabled="true"><span data-lang-content="fr">Voir le forfait</span><span data-lang-content="es">Ver paquete</span><span data-lang-content="en">See the bundle</span></span>
       </div>
     </div>
   </section>
@@ -179,31 +175,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-/* ============================================================
-   ENLACE DEL PAQUETE DE 25 USD (Checklist + CotizaPerito + Simulador)
-   Hoy está vacío = botón desactivado + "Próximamente".
-   Cuando abra la venta, pegue la dirección entre las comillas,
-   por ejemplo:  "https://checklist.vrytify.com/#precio"
-   y el botón se activa solo.
-   ============================================================ */
-var PAQUETE_COMPLETO_URL = "";
-
-(function () {
-  var btn = document.getElementById("tool-paquete-completo");
-  if (!btn || !PAQUETE_COMPLETO_URL) return;
-  var a = document.createElement("a");
-  a.className = "btn btn-primary";
-  a.id = "tool-paquete-completo";
-  a.href = PAQUETE_COMPLETO_URL;
-  a.target = "_blank";
-  a.rel = "noopener noreferrer";
-  a.innerHTML = btn.innerHTML;
-  btn.parentNode.replaceChild(a, btn);
-  var soon = a.parentNode.querySelector(".tool-soon");
-  if (soon) soon.parentNode.removeChild(soon);
-})();
-</script>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
