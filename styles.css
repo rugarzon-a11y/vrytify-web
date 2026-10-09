@@ -1105,3 +1105,5 @@ small.soon-foot{ color:#8FA2B8; font-size:0.8rem; }
 }
 .tool-option .tool-price strong{ white-space:nowrap; }
 .tool-option .btn{ white-space:nowrap; }
+
+.bundle-line + .bundle-line{ margin-top:14px; }
