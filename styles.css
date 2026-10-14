@@ -1058,3 +1058,8 @@ small.soon-foot{ color:#8FA2B8; font-size:0.8rem; }
 .doc-links a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .card h3.small-h{ font-size:0.74rem; font-family: var(--mono); letter-spacing:0.07em; text-transform:uppercase; color: var(--muted); margin:0; }
 .nav-dropdown-col{ align-content: start; }
+
+.legal-content .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 0 14px; }
+.legal-content .table-wrap table{ margin:0; min-width:520px; }
+
+.legal-layout > *{ min-width:0; }
