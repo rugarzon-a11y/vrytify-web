@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stripe — Vrytify</title>
+<meta name="description" content="Vrytify — Stripe." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu / Ir al contenido / Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <img src="/assets/logo-icon-256.png" alt="Vrytify" class="brand-logo-img">
+      <span>Vrytify</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="Langue / Idioma / Language">
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="badge"><span data-lang-content="fr">Paiements</span><span data-lang-content="es">Pagos</span><span data-lang-content="en">Payments</span></span>
+        <h1 class="wide"><span data-lang-content="fr">Votre compte de paiement est configuré</span><span data-lang-content="es">Tu cuenta de pagos quedó configurada</span><span data-lang-content="en">Your payment account is set up</span></h1>
+        <p class="lead"><span data-lang-content="fr">C'est prêt : votre compte de paiement est configuré. Retournez dans l'application Vrytify pour continuer.</span><span data-lang-content="es">Listo, tu cuenta de pagos quedó configurada. Vuelve a la app Vrytify para continuar.</span><span data-lang-content="en">All set: your payment account is configured. Go back to the Vrytify app to continue.</span></p>
+        <div class="hero-actions">
+          <!-- À RÉVISER / A REVISAR : schéma de lien profond de l'app (vrytify://) à confirmer avec l'équipe technique. -->
+          <a class="btn btn-primary" href="vrytify://stripe/retour"><span data-lang-content="fr">Ouvrir l'application Vrytify</span><span data-lang-content="es">Abrir la app Vrytify</span><span data-lang-content="en">Open the Vrytify app</span></a>
+        </div>
+        <p class="lead" style="font-size:0.95rem;margin-top:20px;"><span data-lang-content="fr">Le bouton ne fonctionne pas ? Ouvrez l'application manuellement ou téléchargez-la :</span><span data-lang-content="es">¿El botón no funciona? Abre la app manualmente o descárgala:</span><span data-lang-content="en">Button not working? Open the app manually or download it:</span></p>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="/android" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn btn-ghost" href="/ios" target="_blank" rel="noopener">App Store (TestFlight)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Vrytify</h4>
+        <address>
+          Saint-Jean-sur-Richelieu, Québec<br>
+          Canada
+        </address>
+        <p style="margin-top:10px;">contact@vrytify.com</p>
+      </div>
+      <div>
+        <h4><span data-lang-content="fr">Entreprise & produits</span><span data-lang-content="es">Empresa y productos</span><span data-lang-content="en">Company & products</span></h4>
+        <ul>
+          <li><a href="/"><span data-lang-content="fr">L'entreprise</span><span data-lang-content="es">La empresa</span><span data-lang-content="en">The company</span></a></li>
+          <li><a href="/app.html">Vrytify App</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Vrytify App</h4>
+        <ul>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/privacidad.html"><span data-lang-content="fr">Politique de confidentialité</span><span data-lang-content="es">Política de privacidad</span><span data-lang-content="en">Privacy Policy</span></a></li>
+          <li><a href="/terminos.html"><span data-lang-content="fr">Conditions d'utilisation</span><span data-lang-content="es">Términos de uso</span><span data-lang-content="en">Terms of Use</span></a></li>
+          <li><a href="/cookies.html"><span data-lang-content="fr">Témoins (cookies)</span><span data-lang-content="es">Cookies</span><span data-lang-content="en">Cookies</span></a></li>
+          <li><a href="/app.html#cadre-legal"><span data-lang-content="fr">Tous les documents légaux</span><span data-lang-content="es">Todos los documentos legales</span><span data-lang-content="en">All legal documents</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Vrytify Laboratories Inc. / Vrytify Laboratoires inc.</span>
+      <span><span data-lang-content="fr">Constituée au Canada — #1818910-2</span><span data-lang-content="es">Constituida en Canadá — N.º 1818910-2</span><span data-lang-content="en">Incorporated in Canada — No. 1818910-2</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

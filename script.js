@@ -2,11 +2,12 @@
   "use strict";
 
   var LANGS = ["fr", "es", "en"];
-  var STORAGE_KEY = "veronexo-lang";
+  var STORAGE_KEY = "vrytify-lang";
+  var OLD_STORAGE_KEY = "veronexo-lang"; // ancienne clé : lue une fois pour conserver la langue des visiteurs existants
 
   function getSavedLang() {
     try {
-      var saved = window.localStorage.getItem(STORAGE_KEY);
+      var saved = window.localStorage.getItem(STORAGE_KEY) || window.localStorage.getItem(OLD_STORAGE_KEY);
       if (saved && LANGS.indexOf(saved) !== -1) return saved;
     } catch (e) {}
     return null;
