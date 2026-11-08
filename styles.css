@@ -325,8 +325,6 @@ nav.main-nav a[aria-current="page"]::after{
   object-fit: cover;
   display:block;
 }
-.hero-photo img[data-lang-content]{ display:none; }
-.hero-photo img[data-lang-content].is-visible{ display:block; }
 .eyebrow{
   font-family: var(--mono);
   font-size: 0.74rem;
