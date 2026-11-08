@@ -2,11 +2,12 @@
   "use strict";
 
   var LANGS = ["fr", "es", "en"];
-  var STORAGE_KEY = "veronexo-lang";
+  var STORAGE_KEY = "vrytify-lang";
+  var OLD_STORAGE_KEY = "veronexo-lang"; // ancienne clé : lue une fois pour conserver la langue des visiteurs existants
 
   function getSavedLang() {
     try {
-      var saved = window.localStorage.getItem(STORAGE_KEY);
+      var saved = window.localStorage.getItem(STORAGE_KEY) || window.localStorage.getItem(OLD_STORAGE_KEY);
       if (saved && LANGS.indexOf(saved) !== -1) return saved;
     } catch (e) {}
     return null;
@@ -20,7 +21,7 @@
     return "fr";
   }
 
-  function applyLang(lang) {
+  function applyLang(lang, persist) {
     document.documentElement.setAttribute("lang", lang);
 
     document.querySelectorAll("[data-lang-content]").forEach(function (el) {
@@ -38,14 +39,18 @@
       if (altText) img.setAttribute("alt", altText);
     });
 
+    if (persist === false) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
   }
 
   function initLangSwitch() {
-    var lang = detectLang();
-    applyLang(lang);
+    // Documents contractuels (data-fr-first) : version française présentée en premier,
+    // sans écraser la langue choisie par le visiteur ailleurs sur le site.
+    var frFirst = document.body && document.body.hasAttribute("data-fr-first");
+    var lang = frFirst ? "fr" : detectLang();
+    applyLang(lang, !frFirst);
 
     document.querySelectorAll(".lang-btn").forEach(function (btn) {
       btn.addEventListener("click", function () {

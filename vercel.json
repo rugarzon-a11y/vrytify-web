@@ -15,6 +15,14 @@
     {
       "source": "/eventos/:id",
       "destination": "/evento.html?id=:id"
+    },
+    {
+      "source": "/stripe/retour",
+      "destination": "/stripe-retour.html"
+    },
+    {
+      "source": "/stripe/refresh",
+      "destination": "/stripe-refresh.html"
     }
   ],
   "headers": [
