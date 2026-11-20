@@ -95,11 +95,12 @@ a:focus-visible, button:focus-visible, .lang-btn:focus-visible{
   flex: none;
 }
 .brand-logo-img{
-  width: 30px; height: 30px;
-  border-radius: 8px;
+  height: 42px; width: auto;
   flex: none;
   display: block;
 }
+.brand{ font-size: 1.35rem; gap: 12px; }
+.footer-logo{ display:block; width:140px; height:auto; margin: 0 0 14px; }
 .brand-mark::after{
   content:"";
   position:absolute;
