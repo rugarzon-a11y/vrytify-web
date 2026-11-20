@@ -205,6 +205,20 @@ nav.main-nav a[aria-current="page"]::after{
   .nav-toggle{ display:block; }
 }
 
+/* header compact on small screens: logo + name + menu + language never overlap */
+@media (max-width: 760px){
+  .site-header .wrap{ gap: 8px; }
+  .brand{ font-size: 1.2rem; gap: 8px; min-width: 0; }
+  .brand-logo-img{ height: 36px; }
+  .nav-toggle{ margin-left: auto; flex: none; }
+  .lang-btn{ padding: 6px 8px; }
+}
+@media (max-width: 400px){
+  .brand{ font-size: 1.1rem; gap: 6px; }
+  .brand-logo-img{ height: 32px; }
+  .lang-btn{ padding: 6px 6px; font-size: 0.68rem; }
+}
+
 /* -------------------- nav dropdown "Legal" -------------------- */
 .nav-dropdown{ position:relative; }
 .nav-dropdown > summary{
