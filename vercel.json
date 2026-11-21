@@ -13,6 +13,16 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?vryface\\.com"
+        }
+      ],
+      "destination": "/app.html"
+    },
+    {
       "source": "/eventos/:id",
       "destination": "/evento.html?id=:id"
     },
