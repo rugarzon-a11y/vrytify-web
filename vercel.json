@@ -12,6 +12,17 @@
       "permanent": false
     },
     {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?vryface\\.com"
+        }
+      ],
+      "destination": "/app.html",
+      "permanent": false
+    },
+    {
       "source": "/android",
       "destination": "https://play.google.com/store/apps/details?id=com.vrytify.app",
       "permanent": false
