@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vrytify — Événement</title>
-<meta name="description" content="Découvre cet événement sur Vrytify." />
+<title>Vryface — Événement</title>
+<meta name="description" content="Découvre cet événement sur Vryface." />
 <link rel="icon" href="/assets/logo-mark.png" />
-<meta property="og:title" content="Vrytify — Événement" />
-<meta property="og:description" content="Découvre cet événement sur Vrytify." />
+<meta property="og:title" content="Vryface — Événement" />
+<meta property="og:description" content="Découvre cet événement sur Vryface." />
 <meta property="og:type" content="website" />
 <style>
   :root {
@@ -69,7 +69,7 @@
 </head>
 <body>
   <div class="topbar">
-    <a href="/index.html"><img src="/assets/logo-mark.png" alt="Vrytify" />Vrytify</a>
+    <a href="/index.html"><img src="/assets/logo-mark.png" alt="Vryface" />Vryface</a>
     <div class="lang">
       <button data-setlang="fr" class="active">FR</button>
       <button data-setlang="es">ES</button>
@@ -92,13 +92,13 @@
     const STR = {
       fr: { loading: "Chargement de l'événement…", notFound: "Événement introuvable ou plus disponible.",
         free: "Gratuit", organizedIn: "Organisé dans", online: "En ligne", hybrid: "Hybride",
-        openApp: "Voir dans l'app Vrytify", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Retour à Vrytify" },
+        openApp: "Voir dans l'app Vryface", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Retour à Vryface" },
       es: { loading: "Cargando el evento…", notFound: "Evento no encontrado o ya no disponible.",
         free: "Gratis", organizedIn: "Organizado en", online: "En línea", hybrid: "Híbrido",
-        openApp: "Ver en la app Vrytify", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Volver a Vrytify" },
+        openApp: "Ver en la app Vryface", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Volver a Vryface" },
       en: { loading: "Loading event…", notFound: "Event not found or no longer available.",
         free: "Free", organizedIn: "Organized in", online: "Online", hybrid: "Hybrid",
-        openApp: "View in the Vrytify app", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Back to Vrytify" },
+        openApp: "View in the Vryface app", android: "Android (Google Play)", ios: "iPhone (TestFlight)", back: "← Back to Vryface" },
     };
     let lang = "fr";
     document.querySelectorAll("[data-setlang]").forEach((btn) => {
@@ -162,7 +162,7 @@
       const s = STR[lang];
       const e = eventData;
       const cover = e.niches?.photo_url
-        ? `<img src="${e.niches.photo_url}" alt="${escapeHtml(e.title || "Vrytify")}" />`
+        ? `<img src="${e.niches.photo_url}" alt="${escapeHtml(e.title || "Vryface")}" />`
         : `<span class="emoji">${e.emoji || "✨"}</span>`;
       const priceLabel = e.price_cents > 0 ? `${(e.price_cents / 100).toFixed(2)} $` : s.free;
       const modeLabel = e.event_mode === "virtuel" ? s.online : e.event_mode === "hybride" ? s.hybrid : null;
